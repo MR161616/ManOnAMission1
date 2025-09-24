@@ -7,4 +7,4 @@ with open('yourfile.pdf', 'rb') as file:
     for page in reader.pages:
         raw_text += page.extract_text()
 
-print(raw_text)
+##print(raw_text)
