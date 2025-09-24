@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minecraft Upload Page</title>
+  <style>
+    body {
+      background-image: url('https://wallpapercave.com/wp/wp2757874.png'); /* Minecraft grass block background */
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: rgba(255,255,255,0.85);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    h2 {
+      color: #228B22;
+      font-family: 'Minecraftia', monospace, Arial;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 8px;
+      margin: 10px 0 20px 0;
+      border: 2px solid #228B22;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    input[type="file"] {
+      margin-bottom: 20px;
+    }
+    .minecraft-btn {
+      background: linear-gradient(90deg, #4CAF50 60%, #228B22 100%);
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-family: 'Minecraftia', monospace, Arial;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(34,139,34,0.2);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .minecraft-btn:hover {
+      background: linear-gradient(90deg, #228B22 60%, #4CAF50 100%);
+      transform: scale(1.05);
+    }
+  </style>
+  <!-- Optional: Minecraft font (if you want the real look, you can find and host 'Minecraftia' font) -->
+</head>
+<body>
+  <div class="container">
+    <h2>Minecraft File Uploader</h2>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+      <label for="userText">Enter text:</label><br>
+      <input type="text" id="userText" name="userText" required><br>
+      <label for="pdfFile">Upload PDF:</label><br>
+      <input type="file" id="pdfFile" name="pdfFile" accept="application/pdf" required><br>
+      <button class="minecraft-btn" type="submit">Upload</button>
+    </form>
+  </div>
+</body>
+</html>
+
